@@ -59,7 +59,8 @@ public class ForestFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_forest, container, false);
-        v.setBackgroundColor(0x20FF0000);
+        v.setBackgroundColor(0x2000FF00);
         return v;
+
     }
 }
