@@ -63,31 +63,32 @@ public class ForestFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_forest, container, false);
 //        View v = inflater.inflate(R.layout.fragment_forest, container, false);
 //        v.setBackgroundColor(0x2000FF00);
 //        return v;
 
-        LinearLayout linearLayout = new LinearLayout(getActivity());
-
-        // Set the orientation of the LinearLayout to vertical
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-        linearLayout.setPadding(40, 20, 40, 20);
-        linearLayout.setGravity(Gravity.CENTER);
-
-        TextView textView = new TextView(getActivity());
-        textView.setText("Thursday");
-        textView.setTextSize(35);
-
-
-        ImageView imageView = new ImageView(getActivity());
-        // Set the image resource from the dir imported before
-        imageView.setImageResource(R.drawable.weather_icon_1);
-        imageView.setPadding(20, 20,20,20);
-
-        // Add the View children to the LinearLayout
-        linearLayout.addView(textView);
-        linearLayout.addView(imageView);
-
-        return linearLayout;
+//        LinearLayout linearLayout = new LinearLayout(getActivity());
+//
+//        // Set the orientation of the LinearLayout to vertical
+//        linearLayout.setOrientation(LinearLayout.VERTICAL);
+//        linearLayout.setPadding(40, 20, 40, 20);
+//        linearLayout.setGravity(Gravity.CENTER);
+//
+//        TextView textView = new TextView(getActivity());
+//        textView.setText("Thursday");
+//        textView.setTextSize(35);
+//
+//
+//        ImageView imageView = new ImageView(getActivity());
+//        // Set the image resource from the dir imported before
+//        imageView.setImageResource(R.drawable.weather_icon_1);
+//        imageView.setPadding(20, 20,20,20);
+//
+//        // Add the View children to the LinearLayout
+//        linearLayout.addView(textView);
+//        linearLayout.addView(imageView);
+//
+//        return linearLayout;
     }
 }
