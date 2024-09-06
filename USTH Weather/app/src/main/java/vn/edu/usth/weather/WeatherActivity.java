@@ -1,6 +1,7 @@
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
@@ -8,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -22,10 +25,23 @@ public class WeatherActivity extends AppCompatActivity {
             return insets;
         });
         Log.i("Weather Activity", "Creating an App !");
-        //Create a new Fragment to be placed in the activity layout
+
+        // Obtain the FragmentManager to handle fragment transactions
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // Create instances of the fragments to be added
+        HeaderFragment headerFragment = new HeaderFragment();
+        WeatherFragment weatherFragment = new WeatherFragment();
         ForestFragment forestFragment = new ForestFragment();
-        //Add the fragment to the 'container' Frame Layout
-        getSupportFragmentManager().beginTransaction().add(R.id.main ,forestFragment).commit();
+
+        // Add WeatherFragment to the container with ID weather_fragment_container and ForestFragment
+        fragmentTransaction.add(R.id.header_fragment, headerFragment);
+        fragmentTransaction.add(R.id.weather_fragment, weatherFragment);
+        fragmentTransaction.add(R.id.forest_fragment, forestFragment);
+
+        // Commit the transaction to display the fragments
+        fragmentTransaction.commit();
     }
 
     @Override

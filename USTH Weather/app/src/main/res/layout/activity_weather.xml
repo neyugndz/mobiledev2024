@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".WeatherActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Include the HeaderFragment   -->
+    <fragment
+        android:id="@+id/header_fragment"
+        android:name="vn.edu.usth.weather.HeaderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Include the WeatherFragment   -->
+    <fragment
+        android:id="@+id/weather_fragment"
+        android:name="vn.edu.usth.weather.WeatherFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Include the ForestFragment   -->
+    <fragment
+        android:id="@+id/forest_fragment"
+        android:name="vn.edu.usth.weather.ForestFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+</LinearLayout>
