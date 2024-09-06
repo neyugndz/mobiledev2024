@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ForestFragment">
+
+    <!-- Header of the Forecast    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#107de3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usthweather"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="200dp">
+        </TextView>
+    </LinearLayout>
 
     <!-- Container for the forecast area   -->
     <LinearLayout
         android:id="@+id/fragment_containter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#e0f7fa" >
+        android:background="#" >
 
         <!-- Row for Monday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#ECEEFF"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
                 android:text="@string/mon"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -35,224 +57,133 @@
                 android:src="@drawable/partly_cloudy"
                 android:contentDescription="@string/partly_cloudy"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="40dp" />
 
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/partly_cloudy"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_24c_31c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Partly Cloudy\n24C - 31C"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                >
+            </TextView>
         </LinearLayout>
 
-        <!--Row for Tuesday -->
+        <!-- Rows for Tuesday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tue"
-                android:textSize="18sp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Tue"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/rain"
-                android:contentDescription="@string/showers"
+                android:contentDescription="@string/partly_cloudy"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="40dp" />
 
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/showers"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_24c_30c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Showers\n24C - 30C"
+                android:textSize="16sp">
+            </TextView>
         </LinearLayout>
 
-        <!--Row for Wednesday -->
+        <!-- Rows for Tuesday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wed"
-                android:textSize="18sp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Wed"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/rain"
-                android:contentDescription="Rain"
+                android:contentDescription="@string/partly_cloudy"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="40dp" />
 
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rain"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_22c_23c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Rain\n22C - 23C"
+                android:textSize="16sp">
+            </TextView>
         </LinearLayout>
 
-        <!--Row for Thursday -->
+        <!-- Rows for Tuesday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/thur"
-                android:textSize="18sp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Thu"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/scattered_shower"
-                android:contentDescription="@string/showers"
+                android:contentDescription="@string/scattered_thunderstorms"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/scattered_showers"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_22c_27c"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!--Row for Friday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp" >
+                android:layout_marginEnd="40dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/fri"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <ImageView
-                android:layout_width="50dp"
+                android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:src="@drawable/partly_cloudy"
-                android:contentDescription="@string/mostly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mostly_cloudy"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_22c_30c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+                android:text="Scattered Showers\n22C - 27C"
+                android:textSize="16sp">
+            </TextView>
         </LinearLayout>
 
-        <!--Row for Saturday -->
+        <!-- Rows for Tuesday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sat"
-                android:textSize="18sp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Fri"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -260,208 +191,180 @@
                 android:src="@drawable/partly_cloudy"
                 android:contentDescription="@string/partly_cloudy"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="40dp" />
 
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/partly_cloudy"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_24c_31c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Mostly Cloudy\n22C - 30C"
+                android:textSize="16sp">
+            </TextView>
         </LinearLayout>
 
-        <!--Row for Sunday -->
+        <!-- Rows for Tuesday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sun"
-                android:textSize="18sp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Sat"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/partly_cloudy"
+                android:contentDescription="@string/partly_cloudy"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="40dp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Partly Cloudy\n24C - 31C"
+                android:textSize="16sp">
+            </TextView>
+        </LinearLayout>
+
+        <!-- Rows for Tuesday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Sun"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/thunder_storm"
-                android:contentDescription="@string/thunder_storm"
+                android:contentDescription="@string/partly_cloudy"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/thunder_storm"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_25c_28c"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!--Row for Monday 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp" >
+                android:layout_marginEnd="40dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mon"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <ImageView
-                android:layout_width="50dp"
+                android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:src="@drawable/thunder_storm"
-                android:contentDescription="@string/scattered_thunderstorms"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/scattered_thunderstorms"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_24c_27c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+                android:text="Thunderstorms\n25C - 28C"
+                android:textSize="16sp">
+            </TextView>
         </LinearLayout>
 
-        <!--Row for Tuesday 2 -->
+        <!-- Rows for Tuesday -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="8dp" >
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tue"
-                android:textSize="18sp"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Mon"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/rain"
-                android:contentDescription="@string/showers"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
-
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/showers"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_24c_26c"
-                    android:textSize="18sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!--Row for Wednesday 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wed"
-                android:textSize="18sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/scattered_shower"
-                android:contentDescription="@string/scattered_thunderstorms"
+                android:contentDescription="@string/partly_cloudy"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="8dp" />
+                android:layout_marginEnd="40dp" />
 
-            <!-- Vertical LinearLayout for weather description and temperature -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/scattered_thunderstorms"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_23c_27c"
-                    android:textSize="18sp" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:text="Scattered Thunderstorms\n24C - 27C"
+                android:textSize="16sp">
+            </TextView>
         </LinearLayout>
+
+        <!-- Rows for Tuesday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Tue"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/rain"
+                android:contentDescription="@string/partly_cloudy"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="40dp" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Showers\n24C - 26C"
+                android:textSize="16sp">
+            </TextView>
+        </LinearLayout>
+
+        <!-- Rows for Tuesday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ECEEFF"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:text="Wed"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/scattered_shower"
+                android:contentDescription="@string/partly_cloudy"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="40dp" />
+
+            <TextView
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:text="Scattered Thunderstorms\n23C - 27C"
+                android:textSize="16sp">
+            </TextView>
+        </LinearLayout>
+
     </LinearLayout>
-</FrameLayout>
+</LinearLayout>
