@@ -15,11 +15,4 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"/>
 
-    <!-- Include the WeatherAndForecastFragment -->
-<!--    <FrameLayout-->
-<!--        android:id="@+id/weather_and_forecast_fragment"-->
-<!--        android:name="vn.edu.usth.weather.WeatherAndForecastFragment"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"/>-->
-
 </LinearLayout>

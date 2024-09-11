@@ -59,18 +59,7 @@ public class WeatherFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        if(view == null){
-//            // Inflate the layout for this fragment
-//            view = inflater.inflate(R.layout.fragment_weather, container, false);
-//        } else {
-//            // If the view already has a parent, remove it from the parent before re-attaching it
-//            ViewGroup parent = (ViewGroup) view.getParent();
-//            if (parent != null) {
-//                parent.removeView(view);
-//            }
-//        }
-//        // Return the cached "view"
-//        return view;
+
         return inflater.inflate(R.layout.fragment_weather, container, false);
     }
 }

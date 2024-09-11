@@ -34,20 +34,6 @@ public class WeatherActivity extends AppCompatActivity {
 
         // Set up the Adapter
         viewPager2.setAdapter(adapter);
-
-
-        // Obtain the FragmentManager to handle fragment transactions
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//        // Create instances of the Weather and Forecast Fragment
-//        WeatherAndForecastFragment weatherAndForecastFragment = new WeatherAndForecastFragment();
-//
-//        // Add the Weather and Forecast fragment into the container
-//        fragmentTransaction.replace(R.id.weather_and_forecast_fragment, weatherAndForecastFragment);
-//
-//        // Commit the transaction to display the fragments
-//        fragmentTransaction.commit();
     }
 
     @Override
