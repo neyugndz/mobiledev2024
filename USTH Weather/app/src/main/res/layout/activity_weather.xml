@@ -8,27 +8,18 @@
     android:orientation="vertical"
     tools:context=".WeatherActivity">
 
-    <!-- Include the HeaderFragment   -->
-    <fragment
-        android:id="@+id/header_fragment"
-        android:name="vn.edu.usth.weather.HeaderFragment"
+    <!-- Add a ViewPager to the Weather Activity   -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"/>
 
-    <!-- Include the WeatherFragment   -->
-    <fragment
-        android:id="@+id/weather_fragment"
-        android:name="vn.edu.usth.weather.WeatherFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <!-- Include the ForestFragment   -->
-    <fragment
-        android:id="@+id/forest_fragment"
-        android:name="vn.edu.usth.weather.ForestFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"/>
+    <!-- Include the WeatherAndForecastFragment -->
+<!--    <FrameLayout-->
+<!--        android:id="@+id/weather_and_forecast_fragment"-->
+<!--        android:name="vn.edu.usth.weather.WeatherAndForecastFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
 
 </LinearLayout>

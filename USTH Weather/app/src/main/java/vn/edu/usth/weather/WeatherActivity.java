@@ -11,6 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -26,22 +28,26 @@ public class WeatherActivity extends AppCompatActivity {
         });
         Log.i("Weather Activity", "Creating an App !");
 
+        // Initialize the adapter and the ViewPage
+        ViewPager2 viewPager2 = findViewById(R.id.pager);
+        HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(this);
+
+        // Set up the Adapter
+        viewPager2.setAdapter(adapter);
+
+
         // Obtain the FragmentManager to handle fragment transactions
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        // Create instances of the fragments to be added
-        HeaderFragment headerFragment = new HeaderFragment();
-        WeatherFragment weatherFragment = new WeatherFragment();
-        ForestFragment forestFragment = new ForestFragment();
-
-        // Add WeatherFragment to the container with ID weather_fragment_container and ForestFragment
-        fragmentTransaction.add(R.id.header_fragment, headerFragment);
-        fragmentTransaction.add(R.id.weather_fragment, weatherFragment);
-        fragmentTransaction.add(R.id.forest_fragment, forestFragment);
-
-        // Commit the transaction to display the fragments
-        fragmentTransaction.commit();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//        // Create instances of the Weather and Forecast Fragment
+//        WeatherAndForecastFragment weatherAndForecastFragment = new WeatherAndForecastFragment();
+//
+//        // Add the Weather and Forecast fragment into the container
+//        fragmentTransaction.replace(R.id.weather_and_forecast_fragment, weatherAndForecastFragment);
+//
+//        // Commit the transaction to display the fragments
+//        fragmentTransaction.commit();
     }
 
     @Override
