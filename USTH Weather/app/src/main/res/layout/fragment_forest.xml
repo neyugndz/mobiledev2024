@@ -1,350 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ForestFragment">
-    <!-- Container for the forecast area   -->
+
     <LinearLayout
-        android:id="@+id/fragment_containter"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#FFFFFF" >
+        android:background="#FFFFFF">
 
-        <!-- Row for Monday -->
+        <!-- Container for the forecast area   -->
         <LinearLayout
+            android:id="@+id/fragment_containter"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ECEEFF"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#FFFFFF" >
 
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="@string/mon"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
+            <!-- Row for Monday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ECEEFF"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/partly_cloudy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/mon"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Partly Cloudy\n24C - 31C"
-                android:textSize="16sp"
-                android:layout_marginTop="10dp"
-                >
-            </TextView>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/partly_cloudy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/partly_cloudy_n24c_31c"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    >
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/tue"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rainy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/showers_n24c_30c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/wed"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rainy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/rain_n22c_23c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/thur"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rainy"
+                    android:contentDescription="@string/scattered_thunderstorms"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/scattered_showers_n22c_27c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/fri"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/partly_cloudy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/mostly_cloudy_n22c_30c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/sat"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/partly_cloudy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/partly_cloudy_n24c_31c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/sun"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/thunderstorm"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/thunderstorms_n25c_28c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/mon"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rainy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:text="@string/scattered_thunderstorms_n24c_27c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/tue"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/rainy"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="@string/showers_n24c_26c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
+
+            <!-- Rows for Tuesday -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ECEEFF"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="@string/wed"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/thunderstorm"
+                    android:contentDescription="@string/partly_cloudy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="40dp" />
+
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:text="@string/scattered_thunderstorms_n23c_27c"
+                    android:textSize="16sp">
+                </TextView>
+            </LinearLayout>
         </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Tue"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/rainy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Showers\n24C - 30C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Wed"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/rainy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Rain\n22C - 23C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Thu"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/rainy"
-                android:contentDescription="@string/scattered_thunderstorms"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Scattered Showers\n22C - 27C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Fri"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/partly_cloudy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Mostly Cloudy\n22C - 30C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Sat"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/partly_cloudy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Partly Cloudy\n24C - 31C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Sun"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/thunderstorm"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Thunderstorms\n25C - 28C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Mon"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/rainy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="50dp"
-                android:text="Scattered Thunderstorms\n24C - 27C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Tue"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/rainy"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Showers\n24C - 26C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
-        <!-- Rows for Tuesday -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="#ECEEFF"
-            android:layout_gravity="center">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:text="Wed"
-                android:textSize="16sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/thunderstorm"
-                android:contentDescription="@string/partly_cloudy"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="40dp" />
-
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="50dp"
-                android:text="Scattered Thunderstorms\n23C - 27C"
-                android:textSize="16sp">
-            </TextView>
-        </LinearLayout>
-
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

@@ -8,6 +8,13 @@
     android:orientation="vertical"
     tools:context=".WeatherActivity">
 
+    <!-- Add a Header Above all the others   -->
+    <FrameLayout
+        android:id="@+id/header_fragment"
+        android:name="vn.edu.usth.weather.HeaderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <!-- Add a TabLayout to the Activity   -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab"

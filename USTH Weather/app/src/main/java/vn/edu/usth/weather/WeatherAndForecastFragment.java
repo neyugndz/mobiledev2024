@@ -68,12 +68,10 @@ public class WeatherAndForecastFragment extends Fragment {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         // Create instance of the fragment before adding
-        HeaderFragment headerFragment = new HeaderFragment();
         WeatherFragment weatherFragment = new WeatherFragment();
         ForestFragment forestFragment = new ForestFragment();
 
         // Add the fragment to the Container
-        fragmentTransaction.replace(R.id.header_fragment, headerFragment);
         fragmentTransaction.replace(R.id.weather_fragment, weatherFragment);
         fragmentTransaction.replace(R.id.forest_fragment, forestFragment);
 

@@ -31,6 +31,16 @@ public class WeatherActivity extends AppCompatActivity {
         });
         Log.i("Weather Activity", "Creating an App !");
 
+        // Add the Header Fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        HeaderFragment headerFragment = new HeaderFragment();
+
+        fragmentTransaction.replace(R.id.header_fragment, headerFragment);
+
+        fragmentTransaction.commit();
+
         // Initialize the adapter and the ViewPage
         ViewPager2 viewPager2 = findViewById(R.id.pager);
         HomeFragmentPagerAdapter adapter = new HomeFragmentPagerAdapter(this);
@@ -41,10 +51,12 @@ public class WeatherActivity extends AppCompatActivity {
         // Set up the TabLayout
         TabLayout tabLayout = findViewById(R.id.tab);
 
+        String[] tabTitles = {"HANOI", "PARIS", "TOULOUSE"};
+
         // Link the TabLayout with ViewPager2
         new TabLayoutMediator(tabLayout, viewPager2,
                 (tab, position) -> {
-                    tab.setText("Tab" + (position + 1));
+                    tab.setText(tabTitles[position]);
                 }).attach();
     }
 
