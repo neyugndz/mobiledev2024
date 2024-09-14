@@ -31,7 +31,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/mon"
                     android:textSize="16sp"
@@ -66,7 +66,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/tue"
                     android:textSize="16sp"
@@ -99,7 +99,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/wed"
                     android:textSize="16sp"
@@ -132,7 +132,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/thur"
                     android:textSize="16sp"
@@ -165,7 +165,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/fri"
                     android:textSize="16sp"
@@ -198,7 +198,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/sat"
                     android:textSize="16sp"
@@ -231,7 +231,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/sun"
                     android:textSize="16sp"
@@ -264,7 +264,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/mon"
                     android:textSize="16sp"
@@ -297,7 +297,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/tue"
                     android:textSize="16sp"
@@ -330,7 +330,7 @@
                 android:layout_gravity="center">
 
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:text="@string/wed"
                     android:textSize="16sp"
