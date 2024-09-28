@@ -1,6 +1,7 @@
 package vn.edu.usth.weather;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -31,9 +32,6 @@ public class WeatherActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_weather);
 
-        // Initialize the Handler
-        handler = new Handler(Looper.getMainLooper());
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -62,7 +60,6 @@ public class WeatherActivity extends AppCompatActivity {
                 (tab, position) -> {
                     tab.setText(tabTitles[position]);
                 }).attach();
-
     }
 
     // Override the onCreateOptionsMenu method
@@ -79,8 +76,8 @@ public class WeatherActivity extends AppCompatActivity {
         int itemId = item.getItemId();
 
         if (itemId == R.id.action_reload) {
-            //Toast.makeText(this, "Reloading...", Toast.LENGTH_SHORT).show();
-            networkSimulationRequest();
+            //networkSimulationRequest();
+            new NetworkSimulationRequest().execute();
             return true;
         } else if (itemId == R.id.action_more) {
             // Start PrefActivity when the settings option is clicked
@@ -92,29 +89,31 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
-    // Simulate a network request
-    private void networkSimulationRequest(){
-        Toast.makeText(this, "Refreshing data...", Toast.LENGTH_SHORT).show();
+    // AsyncTask to simulate a network request
+    private class NetworkSimulationRequest extends AsyncTask<Void, Void, String> {
+        @Override
+        protected void onPreExecute(){
+            super.onPreExecute();
+            Toast.makeText(WeatherActivity.this, "Refreshing data...", Toast.LENGTH_SHORT).show();
+        }
 
+        @Override
+        protected String doInBackground(Void...voids){
+            try{
+                // Wait for 5 seconds to simulate a long network access
+                Thread.sleep(5000);
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+            return "Data refreshed successfully!";
+        }
 
-        // Create Thread to simulate network request
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try{
-                    // Wait for 5 seconds to simulate a long network access
-                    Thread.sleep(5000);
-
-                    handler.post(() ->{
-                        Toast.makeText(WeatherActivity.this, "Data refreshed successfully !", Toast.LENGTH_SHORT).show();
-                    });
-                } catch(InterruptedException e){
-                    e.printStackTrace();
-                }
-            };
-        });
-
-        t.start();
+        @Override
+        protected void onPostExecute(String result){
+            super.onPostExecute(result);
+            // Show the result as a Toast
+            Toast.makeText(WeatherActivity.this, result, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
