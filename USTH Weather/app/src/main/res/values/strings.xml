@@ -38,4 +38,7 @@
     <string name="scattered_thunderstorms_n24c_27c">Bão rào rào\n24C - 27C</string>
     <string name="showers_n24c_26c">Mưa rào\n24C - 26C</string>
     <string name="scattered_thunderstorms_n23c_27c">Bão rào rào\n23C - 27C</string>
+    <string name="reload">Reload</string>
+    <string name="more">More</string>
+    <string name="enable_notifications">Enable Notifications</string>
 </resources>

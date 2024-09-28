@@ -1,35 +1,25 @@
 package vn.edu.usth.weather;
 
-import android.content.pm.PackageManager;
-import android.icu.util.Output;
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
-import android.Manifest;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.File;
-import java.io.OutputStream;
-
 public class WeatherActivity extends AppCompatActivity {
-
-    private static final int REQUEST_WRITE_STORAGE = 112;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +33,9 @@ public class WeatherActivity extends AppCompatActivity {
         });
         Log.i("Weather Activity", "Creating an App !");
 
-        // Add the Header Fragment
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        HeaderFragment headerFragment = new HeaderFragment();
-
-        fragmentTransaction.replace(R.id.header_fragment, headerFragment);
-
-        fragmentTransaction.commit();
+        // Set up the ToolBar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         // Initialize the adapter and the ViewPage
         ViewPager2 viewPager2 = findViewById(R.id.pager);
@@ -70,60 +54,34 @@ public class WeatherActivity extends AppCompatActivity {
                 (tab, position) -> {
                     tab.setText(tabTitles[position]);
                 }).attach();
-
-        // Request to permission to write to external storage
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    REQUEST_WRITE_STORAGE);
-        } else {
-            copyMusicFileToSdCard();
-        }
     }
 
+    // Override the onCreateOptionsMenu method
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_WRITE_STORAGE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            copyMusicFileToSdCard();
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.header_tool_bar, menu);
+        return true;
+    }
+
+
+    // Handle the Reload Action and More Action
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+
+        if (itemId == R.id.action_reload) {
+            Toast.makeText(this, "Reloading...", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (itemId == R.id.action_more) {
+            // Start PrefActivity when the settings option is clicked
+            Intent intent = new Intent(this, PrefActivity.class);
+            startActivity(intent);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 
-    // Copy the MP3 file from res/raw to external storage
-    private void copyMusicFileToSdCard() {
-        try{
-            InputStream inputStream = getResources().openRawResource(R.raw.sample);
-            File sdCard = Environment.getExternalStorageDirectory();
-            File dir = new File(sdCard.getAbsolutePath() + "/Music/");
-            dir.mkdirs();
-            File file = new File(dir, "output.mp3");
-
-            OutputStream outputStream = new FileOutputStream(file);
-            byte[] buffer = new byte[1024];
-            int length;
-            while ((length = inputStream.read(buffer)) > 0) {
-                outputStream.write(buffer, 0, length);
-            }
-            outputStream.close();
-            inputStream.close();
-
-            playMusic(file);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
-    // Play the copied music file using MediaPlayer
-    private void playMusic(File musicFile) {
-        try{
-            MediaPlayer mediaPlayer = new MediaPlayer();
-            mediaPlayer.setDataSource(musicFile.getAbsolutePath());
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     protected void onStart(){

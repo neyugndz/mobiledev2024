@@ -8,18 +8,26 @@
     android:orientation="vertical"
     tools:context=".WeatherActivity">
 
-    <!-- Add a Header Above all the others   -->
-    <FrameLayout
-        android:id="@+id/header_fragment"
-        android:name="vn.edu.usth.weather.HeaderFragment"
+    <!-- Using AppBarLayout instead of FrameLayout to contain ToolBar and TabLayout   -->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="#0000ff"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <!-- Add a TabLayout to the Activity   -->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Add a TabLayout to the Activity   -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Add a ViewPager to the Weather Activity   -->
     <androidx.viewpager2.widget.ViewPager2
@@ -27,6 +35,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal" />
-
 
 </LinearLayout>
